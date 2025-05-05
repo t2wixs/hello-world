@@ -1,4 +1,3 @@
-/*
 #include <iostream>
 #include <ctime> 
 #include <cmath>
@@ -24,33 +23,3 @@ int main()
 
     return 0;
 }
-*/
-
-#include <iostream>
-#include <ctime>
-#include <cmath>
-
-using namespace std;
-
-int main() 
-{
-    setlocale(0, "");
-    time_t start, end;
-
-    time(&start);
-
-    double sum = 0.0;
-    for (long long i = 1; i <= 100'000'000; ++i) 
-    {
-        sum += log(i);
-    }
-    cout << "Результат вычислений: " << sum << endl;
-
-    time(&end);
-
-    double seconds = difftime(end, start);
-
-    cout << "Время выполнения: " << seconds << " секунд" << endl;
-
-    return 0;
-}   
